@@ -1,0 +1,169 @@
+@include keyframes(waves) {
+	0% {
+		@include transform(scale(0.2));
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+
+	50% {
+		opacity: 0.9;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	}
+
+	100% {
+		@include transform(scale(1));
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+
+@include keyframes(map-waves) {
+	0% {
+		@include transform(scale(0.2, 0.2));
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+
+	50% {
+		opacity: 0.9;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	}
+
+	100% {
+		@include transform(scale(3, 3));
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+@include keyframes(pulse_animation) {
+	0% { 
+  	@include transform(scale(1));
+  	opacity:.2;
+  }
+  50% { 
+  	@include transform(scale(1.3));
+  	opacity:0.6;
+  }
+  100% { 
+  	@include transform(scale(1));
+  	opacity:.2;
+    }
+}
+
+@include keyframes(stripeSlideIn) {
+	0% { 
+  	@include transform(translateX(-100px) skew(-4deg));
+  	opacity:0;
+  }
+  100% { 
+  	@include transform(translateX(0) skew(-4deg));
+  	opacity:1;
+  }
+}
+
+@include keyframes(stripeSlideInRight) {
+	0% { 
+  	@include transform(translateX(100px) skew(0));
+  	opacity:0;
+  }
+  100% { 
+  	@include transform(translateX(0) skew(-4deg));
+  	opacity:1;
+  }
+}
+
+@include keyframes(floating) {
+	0% { 
+  	@include transform(translate3d(0,0,0));
+  }
+  50% { 
+  	@include transform(translate3d(0,1.5vh,0));
+  }
+  100% { 
+  	@include transform(translate3d(0,0,0));
+  }
+}
+
+@keyframes float2{
+  0%{animation-timing-function:ease-in-out;transform:translate3d(0,0,0)}
+  50%{animation-timing-function:ease-in-out;transform:translate3d(0,1.5vh,0)}
+  100%{animation-timing-function:ease-in-out;transform:translate3d(0,0,0)}
+}
+
+
+
+
+
+
+
+
+
+
+@include keyframes(st-rotate) {
+	0% {
+		@include transform(perspective($st-perspective) rotateY(0));
+	}
+
+	70% {
+		/* this creates the bounce effect */
+		@include transform(perspective($st-perspective) rotateY(200deg)); 
+	}
+
+	100% {
+		@include transform(perspective($st-perspective) rotateY(180deg));
+	}
+}
+
+@include keyframes(st-rotate-inverse) {
+	0% {
+		@include transform(perspective($st-perspective) rotateY(-180deg));
+	}
+
+	70% {
+		/* this creates the bounce effect */
+		@include transform(perspective($st-perspective) rotateY(20deg));
+	}
+
+	100% {
+		@include transform(perspective($st-perspective) rotateY(0));
+	}
+}
+@include keyframes(st-rotate-back) {
+	0% {
+		@include transform(perspective($st-perspective) rotateY(0));
+	}
+
+	70% {
+		/* this creates the bounce effect */
+		@include transform(perspective($st-perspective) rotateY(-200deg)); 
+	}
+
+	100% {
+		@include transform(perspective($st-perspective) rotateY(-180deg));
+	}
+}
+
+@include keyframes(st-rotate-inverse-back) {
+	0% {
+		@include transform(perspective($st-perspective) rotateY(180deg));
+	}
+
+	70% {
+		/* this creates the bounce effect */
+		@include transform(perspective($st-perspective) rotateY(-20deg));
+	}
+
+	100% {
+		@include transform(perspective($st-perspective) rotateY(0));
+	}
+}
+
+
+@include keyframes(rotation) {
+	from {
+        @include transform(rotate(0deg));
+    }
+    to {
+        @include transform(rotate(360deg));
+    }
+}

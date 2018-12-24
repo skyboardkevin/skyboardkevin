@@ -1,0 +1,85 @@
+//
+// = Clients Element styles
+//
+// @package: SassTrend
+// @version: 1.0
+//
+// ------------------------------------------------------------------------- */
+.st_client_service_left_item{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	@include media-max(XS) {
+		display: block;
+	}
+	.st_client_service_single_item{
+		background: $color-alice-blue;
+		border-radius: 15px;
+		margin-bottom: 24px;
+		flex: 0 0 48%;
+		padding: 60px 38px;
+		&:nth-child(1){
+			position: relative;
+			top: 90px;
+		}
+		&:nth-child(3){
+			position: relative;
+			top: 90px;
+			z-index: 3;
+		}
+		.st_client_service_img{
+			height: 60px;
+			width: auto;
+			margin-bottom: 25px;
+		}
+		h3{
+			font-size: 1.250em;
+			color: $color-lochmara;
+			margin: 0 0 14px;
+		}
+		p{
+			@include font-size(14);
+			line-height: 1.8;
+			margin-bottom: 0;
+		}
+		@include media-max(XS) {
+			width: 100%;
+			&:nth-child(1) {
+				position: relative;
+				top: inherit;
+				width: 100%;
+				margin-top: 50px;
+			}
+			&:nth-child(3){
+				top: inherit;
+			}
+		}	
+	}
+}
+
+.st_client_waraper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	.st_client_item {
+		flex: 0 0 25%;
+		min-height: 110px;
+	}
+	@include media-max(MD) {
+		.st_client_item {
+			padding: 0 10px;
+		}
+	}
+	@include media-max(SM) {
+		justify-content: left;
+		text-align: left;
+		.st_client_item {
+			flex: 0 0 33%;
+		}
+	}
+	@include media-max(XS) {
+		display: block;
+	}
+}

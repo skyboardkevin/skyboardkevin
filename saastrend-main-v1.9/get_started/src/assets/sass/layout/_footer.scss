@@ -1,0 +1,327 @@
+//
+// = Footer Styles
+//
+// @package: SassTrend
+// @version: 1.0
+//
+// ------------------------------------------------------------------------- */
+.st_copyright_content {
+	p {
+	  font-size: 0.875em;
+	  margin-bottom: 0;
+	}
+	a {
+		color: $color-title;
+		font-weight: 600;
+		@include transition(all 0.3s ease-in-out);
+	}
+	i.fa-heart {
+		color: #FC0656;
+		margin: 0 2px 0 8px;
+	}
+}
+.st_fotter_single_content {
+	p {
+		margin-bottom: 10px;
+	}
+	h3 {
+		font-size: 1.125em;
+	}
+}
+.st_fotter_logo { 
+	img {
+		margin-bottom:20px;
+	}
+}
+.st_fotter_single_content {
+	span {
+		color: $color-gigas;
+	}
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+footer.st_default_footer_area {
+	.st_footer_logo_warap {
+		margin: 0 0 90px;
+		p {
+			font-size: 0.875em;
+			line-height: 1.8;
+		}
+		img {
+			margin-bottom: 26px;
+		}
+	}
+  .st_copyright_content p {
+	  font-size: 0.875em;
+	}
+	.st_fotter_heding_title {
+	  margin: 0 0 40px;
+	  h3 {
+	  	font-weight: bold;
+	  }
+	  @include media-max(SM) {
+		margin-bottom: 15px;
+	  }
+	}
+	.st_fotter_menu {
+		ul {
+			@include st_ul();
+			li {
+				margin: 18px 0;
+				&:first-child {
+					margin: 0;
+				}
+				a {
+					  color: #140F30;
+					  font-size: 0.875em;
+					  font-weight: 500;
+					  @include transition();
+				}
+				@include media-max(SM) {
+					margin: 8px 0;
+				}
+			}
+		}
+		&.st_fotter_menu_inline {
+			ul {
+				li {
+					display: inline-block;
+					margin: 0 20px;
+					text-transform: capitalize;
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					@include media-max(SM) {
+						margin-top: 5px;
+						margin-bottom: 5px;
+					}
+					@include media-max(XS) {
+						display: block;
+						margin: 0;
+						a {
+							display: block;
+							padding: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.st_social_icon {
+	p {
+		font-size: 0.875em;
+		margin: 0 0 25px;
+	}
+	ul {
+		@include st_ul();
+		li {
+			display: inline-block;
+			margin: 0 10px;
+			text-transform: capitalize;
+			&:first-child {
+				margin-left: 0;
+			}
+			a {
+				color: $color-haiti;
+			}
+		}
+	}
+}
+
+footer.st_default_footer_area.st_subscribe_footer,
+footer.st_default_footer_area.bacground-bottom {
+  position: relative;
+  background-size: cover;
+  background-position: center bottom;
+  z-index: 0;
+  .st_subscription_wrapper {
+  	margin-bottom: 180px;
+  	@include media-max(MD) {
+  		margin-bottom: 150px;
+  	}
+  }
+}
+
+@each $name, $color in $colors {
+  footer.st_default_footer_area .st_fotter_menu.text-#{$name} ul li a,
+  .st_social_icon.text-#{$name} ul li a {
+    color: $color;
+  }
+}
+
+.st_fotter_border_bottom_v2 {
+	padding: 100px 0 80px;
+	border-bottom: 1px solid rgba(112, 112, 112, 0.35);
+	margin-bottom: 30px;
+	@include media-max(MD) {
+		text-align: center;
+	}
+}
+.st_fotter_border_bottom_v2.st_fotter_border_bottom_v3 {
+	border-bottom-color: rgba(112, 112, 112, 0.1);
+}
+
+.footer-subscription-wrapper {
+	position: relative;
+	padding: 100px 0 300px;
+	@include media-max(SM) {
+		padding-bottom: 230px;
+	}
+	.st_footer_subscriber {
+		background-color: #fff;
+		display: flex;
+		position: absolute;
+		top: calc(100% + 132px);
+		padding: 107px 120px;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		max-width: 100%;
+		overflow: hidden;
+		@include media-max(LG) {
+			padding: 100px 70px;
+		}
+		@include media-max(MD) {
+			display: block;
+		}
+		@include media-max(SM) {
+			padding: 75px 40px;
+			top: calc(100% + 80px);
+		}
+		.subscription-form-logo {
+			width: 236px;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: "";
+			background-image: url(../images/v8/footer-subscribe-bg-01.png);
+			background-repeat: no-repeat;
+			background-size: auto 100%;
+			z-index: -1;
+			@include media-max(MD) {
+				display: none;
+			}
+		};
+		&:after{
+			width: 282px;
+			height: 300px;
+			position: absolute;
+			left: auto;
+			top: 0;
+			content: "";
+			background-image: url(../images/v8/footer-subscribe-bg-02.png);
+			background-repeat: no-repeat;
+			right: 0;
+			z-index: -1;
+			background-size: cover;
+		}
+		border-radius: 10px;
+		box-shadow: 0 3px 30px rgba(0, 0, 0, 0.07);
+		.st_news_left_item{
+			h2{
+				font-weight: 300;
+				margin-bottom: 20px;
+			}
+			span{
+				font-weight: bold;
+			}
+			@include media-max(SM) {
+				margin-bottom: 35px;
+			}
+		}
+		form.st-form {
+			position: relative;
+		}
+		.st_subscribe{
+			width: 410px;
+			margin-right: 0;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			@include media-max(MD) {
+				width: 100%;
+			}
+			input[type="email"] {
+				height: 60px;
+				padding: 0 25px;
+				border: 2px solid rgba(0, 121, 191, .1);
+			}
+			input[type="submit"]{
+				height: 50px;
+				top: 5px;
+				right: 5px;
+				padding: 0 25px;
+				background-color: $color-lochmara;
+				color: $color-white;
+				box-shadow: none;
+				&:hover{
+					background-color: $color-aqua;
+				}
+			}
+		}
+	}
+}
+
+
+/*-----------------------------------------------------------------
+ ST FOTTER VARIATION AREA
+-------------------------------------------------------------------*/
+.st_default_footer_area.footer-angle {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	&:before{
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: "";
+		background-color: #fff;
+		background-size: cover;
+		-webkit-clip-path: polygon(0% 100%, 100% 0%, 0% -1%);
+		clip-path: polygon(0% 100%, 100% 0%, 0% -1%);
+		@supports not ((-webkit-clip-path: polygon(0% 100%, 100% 0%, 0% 0%)) or (clip-path: polygon(0% 100%, 100% 0%, 0% 0%))) {
+			@include transform(skewY(-3deg));
+			@include transform-origin(bottom left);
+		}
+		z-index: -1;
+	}
+}
+.st_default_footer_area {
+	.st_left_about_shape {
+		top: 80px;
+		z-index: -1;
+	}
+	.st_left_about_shape span:nth-child(1) {
+		left: 50%;
+		background: #333452;
+	}
+	.st_left_about_shape span:nth-child(2) {
+	  	left: 60%;
+		background: #262E4F;
+		z-index: 2;
+		margin-top: -28px;
+	}
+
+	.st_left_about_shape span:nth-child(3) {
+	  	left: 73%;
+		background: #1A274C;
+		margin-top: -30px;
+	}
+}
+
+.st_footer_top {
+  padding-bottom: 55px;
+  border-bottom: 1px solid #E5E5E5;
+}

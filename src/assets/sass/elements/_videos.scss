@@ -1,0 +1,221 @@
+//
+// = Video Element Styles
+//
+// @package: SassTrend
+// @version: 1.0
+//
+// ------------------------------------------------------------------------- */
+.st_video_bg {
+  border-radius: 10px;
+  width: 828px;
+  height: 455px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #8066dc;
+  background: -webkit-linear-gradient(#8066dc 0%, #5040a0 100%);
+  background: -o-linear-gradient(#8066dc 0%, #5040a0 100%);
+  background: linear-gradient(#8066dc 0%, #5040a0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second',GradientType=0 );
+  z-index: 0;
+  &::before {
+		width: 90%;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 30px;
+		content: "";
+		background-color: rgba(128, 102, 220, 0.77);
+		filter: blur(24px);
+		z-index: -1;
+		transform: translateX(-50%);
+  }
+  &::after {
+		border-radius: 10px;
+		border-radius: 10px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: "";
+		background: #8066dc;
+		background: -webkit-linear-gradient(#8066dc 0%, #5040a0 100%);
+		background: -o-linear-gradient(#8066dc 0%, #5040a0 100%);
+		background: linear-gradient(#8066dc 0%, #5040a0 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second',GradientType=0 );
+		z-index: 0;
+		opacity: .6;
+  }
+  @include media-max(SM) {
+    height: 280px;
+  }
+}
+.st_video_icon a {
+  border-radius: 100%;
+  background-color: $color-white;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  z-index: 1;
+}
+.iq-waves {
+	height: 14rem;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 14rem;
+	z-index: 0;
+	.waves {
+  	@include animation(2s ease-in-out 0s normal none infinite running waves);
+  	border-radius: 100%;
+  	height: 100%;
+  	opacity: 0;
+  	position: absolute;
+  	width: 100%;
+	}
+	.wave-1 {
+		background-color: rgba(56, 67, 104, 0.3);
+  	width: 70%;
+  	height: 70%;
+  	left: 15%;
+  	top: 15%;
+	}
+	.wave-2 {
+  	background-color: rgba(56, 67, 104, 0.09);;
+  	width: 86%;
+  	height: 86%;
+  	left: 7%;
+  	top: 7%;
+	}
+}
+.st_video_bg.orange-gradient-banner {
+  @extend %orange-gradient-banner;
+  &::before {
+    background-color: rgba(254, 149, 69, 0.77);
+    filter: blur(24px);
+  }
+  &::after {
+    background: none;
+    background-color: #FE9545;
+    opacity: .6;
+  }
+}
+
+.st_video_cloumn {
+  padding: 55px 0;
+  margin-left: calc((-100vw + 100%) / 2);
+  padding-left: calc((100vw - 100%) / 2);
+  border-radius: 0 620px 620px 0;
+  @include media-max(MD) {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+}
+.st_video_img {
+  position: relative;
+  border-radius: 100%;
+  width: 236px;
+  height: 236px;
+  display: block;
+  border: 13px solid rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(36, 41, 46, 0.53);
+  }
+  .st_popup_youtube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+span.st-play-icon-border {
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 40px;
+  overflow: hidden;
+  border: 1px dashed #FF0000;
+}
+
+.st_video_icon {
+  svg{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+  circle {
+    fill: transparent;
+    stroke: green;
+    stroke-width: 1;
+  }
+  .solid{
+    stroke-dasharray: none;
+  }
+  .dashed {
+    stroke-dasharray: 8, 8.5;
+  }
+}
+
+
+.st_video_area.st_video_3{
+  position: relative;
+  &:before{
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(29, 16, 104, 0.8);
+  }
+}
+
+.st_video_3 .st_video_icon a {
+  z-index: 2;
+}
+.st_video_3 .iq-waves {
+  z-index: 1;
+  .wave-1 {
+    background-color: rgba(255, 255, 255, 0.09);
+  }
+  .wave-2 {
+    background-color: rgba(255, 255, 255, 0.24);
+  }
+}
+.st_watch_video {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 70%;
+  z-index: 2;
+}

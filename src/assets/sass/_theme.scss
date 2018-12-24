@@ -1,0 +1,474 @@
+@charset "utf-8";
+/*------------------------------------------------------------------
+.______    __  ___   ___  __   _______  ___________    ____ 
+|   _  \  |  | \  \ /  / |  | |   ____||   ____\   \  /   / 
+|  |_)  | |  |  \  V  /  |  | |  |__   |  |__   \   \/   /  
+|   ___/  |  |   >   <   |  | |   __|  |   __|   \_    _/   
+|  |      |  |  /  .  \  |  | |  |____ |  |        |  |     
+| _|      |__| /__/ \__\ |__| |_______||__|        |__|     
+
+
+[Main Stylesheet]
+
+Project:    	SassTrend
+Version:    	0.1
+Last change:    05.10.2018
+Primary use:    Bootstrap SaaS, Startup, Software & WebApp Template
+
+
+[Typography]
+
+Body: 16px "Poppins", sans-serif;
+Title: 34px "Oxygen", "Poppins", sans-serif;
+
+/*==============================
+[Table of contents]
+
+1. Reset Setup
+2. Button Styles
+3. Header Styles
+4. Footer Styles
+5. Heading / Section Heading Styles
+6. Hero Header/Banners Styles
+7. Promos Styles
+8. Video Elements Styles
+9. Counter Styles
+10. Feature Elements Styles
+11. About Block Styles
+12. Content Elements Styles
+13. Call To Actions Styles
+14. Team Elements Styles
+15. Testimonial Styles
+16. Screenshot Slider Styles
+17. Subscriptions Styles
+18. Pricing Styles
+19. Client Slider Styles
+20. Tab Features Styles
+21. Download Styles
+22. Contact Block Styles
+23. Simple Content Styles
+24. Showcase Styles
+25. Map Block Styles
+26. List Elements Styles
+27. Special Elements Styles
+28. Clients Elements Styles
+29. Work process Styles
+30. Faqs Styles
+31. Login Block Styles
+32. Info Box Elements Styles
+33. Image Mapping Styles
+34. Logo
+35. BreadCrumb
+36. Info Elements
+37. Reward blocks
+38. Work area elements
+39. Inner pages
+
+-------------------------------------------------------------------*/
+
+// main variables
+@import "variables";
+
+// main mixin
+@import "setup/mixin";
+
+/**
+* = 1. Reset Setup
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "setup/reset";
+
+// colors setup
+@import "utility/colors";
+
+// animation setup
+@import "utility/animation";
+
+// spacing setup
+@import "setup/sections";
+
+/**
+* = 2. Button Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/buttons";
+
+/**
+* = 3. Header Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "layout/header";
+
+/**
+* = 4. Footer Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "layout/footer";
+
+/**
+* = 5. Heading / Section Heading Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/heading";
+
+
+/**
+* = 6. Hero Header/Banners Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/hero-headers";
+
+
+/**
+* = 7. Promos Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/promos";
+
+
+/**
+* = 8. Video Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/videos";
+
+
+/**
+* = 9. Counter Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/counter";
+
+
+/**
+* = 10. Feature Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/features";
+
+
+/**
+* = 11. About Block Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/about";
+
+
+/**
+* = 12. Content Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/content";
+
+
+/**
+* = 13. Call To Actions Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/call-to-actions";
+
+
+/**
+* = 14. Team Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/team-members";
+
+
+/**
+* = 15. Testimonial Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/testimonial";
+
+
+/**
+* = 16. Screenshot Slider Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/screenshot-slider";
+
+
+/**
+* = 17. Subscriptions Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/subcriptions";
+
+
+/**
+* = 18. Pricing Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/pricing";
+
+
+/**
+* = 19. Client Slider Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/client-slider";
+
+
+/**
+* = 20. Tab Features Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/tab-features";
+
+
+/**
+* = 21. Download Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/download";
+
+
+/**
+* = 22. Contact Block Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/contact";
+
+
+/**
+* = 23. Simple Content Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/simple-content";
+
+
+/**
+* = 24. Showcase Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/showcase";
+
+
+/**
+* = 25. Map Block Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/map";
+
+
+/**
+* = 26. List Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/list";
+
+
+/**
+* = 27. Special Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/special_elements";
+
+
+/**
+* = 28. Clients Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/clients";
+
+
+/**
+* = 29. Work process Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/work-process";
+
+
+/**
+* = 30. Faqs Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/faqs";
+
+
+/**
+* = 31. Login Block Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "block/login-block";
+
+
+/**
+* = 32. Info Box Elements Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/info-box";
+
+
+/**
+* = 33. Image Mapping Styles
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/image-mapping";
+
+
+
+/**
+* = 34. logo
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "elements/logo";
+
+
+
+/**
+* = 35. BreadCrumb
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "breadcrumb/breadcrumb";
+
+
+/**
+* = 36. Info Elements
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "breadcrumb/contact-info";
+
+
+/**
+* = 37. Reward blocks
+*
+* @package: SassTrend
+* @version: 1.7
+*
+* ------------------------------------------------------------------------- */
+@import "block/reward";
+
+
+/**
+* = 38. Work area elements
+*
+* @package: SassTrend
+* @version: 1.7
+*
+* ------------------------------------------------------------------------- */
+@import "elements/work-area";
+
+
+/**
+* = 39. Inner Pages
+*
+* @package: SassTrend
+* @version: 1.0
+*
+* ------------------------------------------------------------------------- */
+@import "page/blog";
+@import "page/404";
+@import "page/coming-soon";
+@import "page/login";
+@import "page/shop";
+@import "page/docs";

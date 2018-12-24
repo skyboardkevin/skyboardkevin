@@ -1,0 +1,39 @@
+//
+// = Work Process Styles
+//
+// @package: SassTrend
+// @version: 1.0
+//
+// ------------------------------------------------------------------------- */
+.st_work_single_item{
+	position: relative;
+	text-align: center;
+	&::after{
+		width: 63px;
+		height: 36px;
+		position: absolute;
+		left: auto;
+		top: 50px;
+		content: "";
+		background-image: url(../images/v9/arrow.png);
+		right: -40px;
+		background-repeat: no-repeat;
+	}
+	img{
+		margin-bottom: 40px;
+	}
+	@include media-max(MD) {
+		&::after {
+			position: relative;
+			left: auto;
+			top: inherit;
+			right: inherit;
+			display: block;
+			margin: 50px auto;
+			transform: rotate(90deg);
+		}
+	}
+}
+.last_child_none .st_work_single_item::after {
+	display: none;
+}

@@ -1,0 +1,42 @@
+//
+// = Map Block Styles
+//
+// @package: SassTrend
+// @version: 1.0
+//
+// ------------------------------------------------------------------------- */
+div.st_map {
+	width: 100%;
+	height: 485px;
+	text-align: center;
+  @include media-max(MD) {
+    height: 350px;
+  }
+  @include media-max(SM) {
+    height: 300px;
+  }
+}
+.st_marker {
+  background-color: #FF5D1C;
+  border-radius: 100%;
+  border: 7px solid #ffffff;
+  &:before{
+  	width: 90px;
+    height: 90px;
+    position: absolute;
+    left: -39px;
+    top: -39px;
+    content: "";
+    background: rgba(255, 93, 28, 0.4);
+    @include animation(2s ease-in-out 0s normal none infinite running waves);
+    border-radius: 100%;
+    z-index: -1;
+	 }
+}
+.st_contact_page .st_marker {
+  background-color: $color-white;
+  border: 7px solid $color-perison-blue;
+  &:before{
+    background: rgba(30, 67, 221, 0.1);
+   }
+}

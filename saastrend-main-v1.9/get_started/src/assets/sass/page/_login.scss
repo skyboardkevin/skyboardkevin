@@ -1,0 +1,113 @@
+.st_login_page_area{
+	position: relative;
+	min-height: 850px;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	&:before{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		z-index: -1;
+		background: #1e3bdd;
+		background: -moz-linear-gradient(top, #1e3bdd 0%, #01e0f6 100%);
+		background: -webkit-linear-gradient(top, #1e3bdd 0%, #01e0f6 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e3bdd', endColorstr='#01e0f6',GradientType=0 );
+	}
+}
+
+.st_login_wrap{
+	min-height: 850px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.st_login_container{
+		width: 544px;
+		max-width: 100%;
+		border-radius: 5px;
+		background: -moz-linear-gradient(top, rgba(217,229,255,0.85) 0%, rgba(254,255,255,0.85) 100%);
+		background: -webkit-linear-gradient(top, rgba(217,229,255,0.85) 0%,rgba(254,255,255,0.85) 100%);
+		background: linear-gradient(to bottom, rgba(217,229,255,0.85) 0%,rgba(254,255,255,0.85) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9e5ff', endColorstr='#d9feffff',GradientType=0 );
+	}
+}
+.st_login_item{
+	position: relative;
+	margin-bottom: 20px;
+	input{
+		padding: 25px 70px;
+		font-weight: 400;
+		@include font-size(16);
+	}
+	i{
+		position: absolute;
+		left: 35px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+#st_login_btn{
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 3px;
+	padding: 21px 10px;
+	@include font-size(20);
+	color: $color-white;
+	background-color: $color-perison-blue;
+	
+}
+.st_login_social_icon{
+	h3{
+		color: #333333;
+	}
+	ul{
+		li{
+			display: inline-block;
+			margin: 0 10px;
+			
+			a{
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+				display: block;
+				border-radius: 100%;
+				display: block;
+				text-align: center;
+				@include font-size(24);
+				color: $color-perison-blue;
+				background-color: $color-white;
+			}
+		}
+	}
+	p{
+		color: #292929;
+		margin: 0;
+	}
+}
+
+.st_login_item input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #9595A8;
+}
+.st_login_item input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #9595A8;
+   opacity:  1;
+}
+.st_login_item input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #9595A8;
+   opacity:  1;
+}
+.st_login_item input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #9595A8;
+}
+.st_login_item input::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #9595A8;
+}
+
+.st_login_item input::placeholder { /* Most modern browsers support this now. */
+   color:    #9595A8;
+}

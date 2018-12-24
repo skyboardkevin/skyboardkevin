@@ -1,0 +1,201 @@
+//
+// = Work Area Details Block Styles
+//
+// @package: SassTrend
+// @version: 1.7
+//
+// ------------------------------------------------------------------------- */
+.st_work_area{
+	position: relative;
+	&:before{
+	    width: 100%;
+		height: 250px;
+		position: absolute;
+		left: 0;
+		top: -150px;
+		content: "";
+		background-color: #5D81EC;
+		background-size: cover;
+		-webkit-clip-path: polygon(-85% 100%, 100% 100%, 100% 0%);
+		clip-path: polygon(-70% 100%, 100% 100%, 100% 0%);
+
+		@include media-max(LG) {
+			height: 140px;
+			top: -95px;
+		}
+		@include media-max(SM) {
+			display: none;
+		}
+	}
+}
+
+.st_work_content{
+	color: $color-white;
+	font-weight: 300;
+	position: relative;
+	padding-left: 80px;
+	padding-bottom: 75px;
+	counter-increment: my-sec-counter;
+	&:last-child{
+		padding-bottom: 0;
+	}
+	&:before{
+    	content: counter(my-sec-counter);
+		position: absolute;
+		left: 0;
+		width: 51px;
+		height: 51px;
+		line-height: 51px;
+		text-align: center;
+		font-weight: 300;
+		border-radius: 100%;
+		@include font-size(24);
+		color: $color-white;
+		background-color: $color-picton-blue;
+	}
+	&:after{
+		content: "";
+		position: absolute;
+	    top: 51px;
+	    left: 25px;
+	    width: 2px;
+	    height: calc(100% - 51px);
+	    background-image: linear-gradient(to top, transparent 75%, rgba(255, 255, 255, 0.43) 25%);
+	    background-size: 100% 20px;
+	}
+	&:last-child:after{
+		content: none;
+	}
+	h3{
+		@include font-size(24);
+		margin-bottom: 30px;
+		color: $color-white;
+	}
+	p{
+		margin: 0;
+		line-height: 1.87;
+	}
+}
+
+.st_work_right_thumb{
+	.st_work_right_thumb_big {
+		width: 380px;
+		max-width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+	.st_work_right_thumb_small {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 350px;
+		z-index: 0;
+		left: -100px;
+		max-width: 100%;
+	}
+	@include media-max(MD) {
+		.st_work_right_thumb_big {
+			left: 50%;
+			@include transform(translateX(calc(-50% + 90px)));
+		}
+		.st_work_right_thumb_small {
+			left: calc(50% - 220px);
+		}
+	}
+	@include media-max(SM) {
+		.st_work_right_thumb_big {
+			left: 0;
+			@include transform(translateX(0));
+			width: 100%;
+		}
+		.st_work_right_thumb_small {
+			display: none;
+		}
+	}
+}
+
+
+
+// work area v2
+.st_work_area.st_work_2{
+	background: #a4f2ff;
+	background: -moz-linear-gradient(top, #a4f2ff 0%, #4cd0e5 100%);
+	background: -webkit-linear-gradient(top, #a4f2ff 0%,#4cd0e5 100%);
+	background: linear-gradient(to bottom, #a4f2ff 0%,#4cd0e5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4f2ff', endColorstr='#4cd0e5',GradientType=0 );
+	&:before{
+		background: #9AEEFC;
+	}
+	.st_work_content{
+		&:before{
+			background-color: transparent;
+			border: 1px solid $color-git;
+			color: $color-git;
+			font-weight: 700;
+			@include transition;
+			
+		}
+		&:hover:before{
+			color: $color-white;
+			background-color: $color-geraldine;
+			border: 1px solid $color-geraldine;
+			box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3);
+		}
+		&:after{
+			top: 61px;
+	    	height: calc(100% - 66px);
+	    	background-size: 100% 25px;
+			background-image: linear-gradient(to top, transparent 75%, rgba(102, 102, 102, 0.78) 25%);
+		}
+	}
+}
+
+
+// work area v3
+.st_work_3{
+	.st_work_content_item{
+		display: flex;
+		margin-bottom: 75px;
+		&:last-child{
+			margin: 0;
+		}
+		.st_work_icon{
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+			border-radius: 100%;
+			text-align: center;
+			flex: 0 0 auto;
+			margin-right: 30px;
+			background-color: rgba(76, 208, 229, 0.09);
+		}
+		.st_work_content {
+			padding-left: 0;
+			&:before {
+				content: none;
+			}
+			p{
+				color: #9EA8BA;
+			}
+		}
+	}
+	 
+}
+.shapes-bgi::after {
+	content: "";
+	display: block;
+	width: 100%;
+	top: -159px;
+	left: 0;
+	background-image: url(../images/shapes.png);
+	background-size: 100% auto;
+	position: absolute;
+	bottom: 0;
+	opacity: 0.3;
+	@include media-max(LG) {
+		top: -90px;
+	}
+	@include media-max(SM) {
+		top: 0;
+	}
+  }

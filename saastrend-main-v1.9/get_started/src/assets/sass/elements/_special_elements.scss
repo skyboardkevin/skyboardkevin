@@ -1,0 +1,172 @@
+//
+// = Special Element styles
+//
+// @package: SassTrend
+// @version: 1.0
+//
+// ------------------------------------------------------------------------- */
+.st_dotted_bg{
+	width: 415px;
+	height: 415px;
+	background-image: url(../images/v6/dotted-2.png);
+	background-size: cover;
+	padding: 65px;
+	position: relative;
+	.st_dotted_border{
+		border: 2px dashed #BBD3F3;
+		width: 100%;
+		height: 100%;
+		padding: 60px;
+		border-radius: 100%;
+		.st_solid_bg{
+			background-color: #3A3D98;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			position: relative;
+			left: 0;
+			top: 0;
+			&:before{
+				width: 181px;
+				height: 181px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				content: "";
+				transform: translate(-50%, -50%);
+				background-image: url(../images/v6/dotted.png);
+				border-radius: 100%;
+			}
+			.st_s{
+				color: #3A3D98;
+				height: 100%;
+				font-size: 3.5em;
+				font-weight: bold;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: $font-title;
+				z-index: 0;
+				top: -8px;
+				&:before,&:after{
+				  width: 75px;
+				  height: 75px;
+				  position: absolute;
+				  left: 50%;
+				  top: 55%;
+				  content: "";
+				  transform: translate(-50%, -50%) rotate(-30deg);
+				  background-color: #fff;
+				  border-radius: 15px;
+				  z-index: -1;
+				  @include media-max(SM) {
+						width: 55px;
+						height: 55px;
+						border-radius: 6px;
+					}
+				}
+				&:after{
+					background-color: rgba(255, 255, 255, 0.33);
+					transform: translate(-50%, -50%) rotate(30deg);
+				}
+			}
+		}
+	}
+	.st_icon_item{
+		.st_about_icon{
+			position: absolute;
+		  font-size: 1.750em;
+		  background-color: #F23F79;
+		  color: #fff;
+		  width: 70px;
+		  height: 70px;
+		  line-height: 70px;
+		  text-align: center;
+		  box-shadow: 0 5px 20px rgba(242, 63, 121, 0.45);
+		  border-radius: 100%;
+		  @include media-max(SM) {
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 1em;
+			}
+			&.icon_01{
+				left: 110px;
+				top: 0;
+			}
+			&.icon_02{
+				left: 70px;
+				bottom: 30px;
+			}
+			&.icon_03{
+				right: 7px;
+				bottom: 165px;
+			}
+		}
+	}
+	@include media-max(LG) {
+		width: 365px;
+		height: 365px;
+	}
+	@include media-max(SM) {
+		width: 320px;
+		height: 320px;
+		padding: 40px;
+	}
+}
+
+
+
+// bootstrap
+.st_banner_sidebar_item{
+	position: relative;
+	width: 408px;
+	height: 408px;
+	background-color: rgba(255, 255, 255, .1);
+	padding: 35px;
+	border-radius: 30px;
+	.st_banner_single_item_01{
+		width: 100%;
+		height: 100%;
+		padding: 28px;
+		background-color: rgba(255, 255, 255, .15);
+		border-radius: 30px;
+		.st_banner_single_item_02{
+			width: 100%;
+			height: 100%;
+			padding: 30px;
+			background-color: #fff;
+			border-radius: 20px;
+			.st_banner_single_item_03{
+				width: 100%;
+				height: 100%;
+				background-color: #8066DC;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 10em;
+				text-transform: uppercase;
+				box-shadow: 0 0 30px rgba(128, 102, 220, 0.65);
+				border-radius: 20px;
+			}
+		}
+	}
+  &.st_banner_sidebar_item_v2 {
+		width: 306px;
+		height: 306px;
+		background-color: $color-medium-purple;
+		padding: 26px;
+		margin: 0 auto;
+		.st_banner_single_item_01 {
+			padding: 21px;
+			.st_banner_single_item_02{
+				padding: 25px;
+				.st_banner_single_item_03 {
+					font-size: 8.125em;
+  				color: $color-white;
+				}
+			}
+		}
+  }
+}

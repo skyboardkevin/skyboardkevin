@@ -1,0 +1,41 @@
+.saastrend-logo {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 80px;
+  position: relative;
+  h1 {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 9rem;
+    line-height: 220px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+  }
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    &.st-logo-eff1 {
+      background-color: $color-aqua;
+    }
+    &.st-logo-eff2 {
+      opacity: 0.2;
+      background-color: $color-white;
+      @include animation(rotation 9s infinite linear);
+    }
+  }
+  @include media-max(SM) {
+    width: 150px;
+    height: 150px;
+    h1 {
+      font-size: 5rem;
+      line-height: 150px;
+    }
+  }
+}
